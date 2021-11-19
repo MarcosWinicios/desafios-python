@@ -1,6 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+# Faça um programa que peça uma nota, entre zero e dez. Mostre uma mensagem
+# caso o valor seja inválido e continue pedindo até que o usuário informe um valor
+# válido.
+
 def validarValor(valor):
     if valor > 0 and valor < 10:
         return True
