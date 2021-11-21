@@ -12,24 +12,20 @@ def validarIntervaloDoValor(valor):
         return False
 
 
-def validarTipoDeEntrada():
-    try:
-        nota = int(input("Informe um valor entre 0 e 10: \n"))
-        return nota
-    except TypeError:
-        print("ERRO: Tipo de dado inválido!")
-        main()
+def capturaValor():
+    nota = float(input("Informe uma nota entre 0 e 10"))
+    return nota
 
 
 def main():
-    valor = validarTipoDeEntrada()
+    valor = capturaValor()
     condicao = validarIntervaloDoValor(valor)
 
     while True:
         if not(condicao):
             print("VALOR INVÁLIDO! O valor deve ser um número entre 0 e 10\n")
-            nota = validarTipoDeEntrada()
-            condicao = validarIntervaloDoValor(nota)
+            valor = capturaValor()
+            condicao = validarIntervaloDoValor(valor)
         else:
             break
 
