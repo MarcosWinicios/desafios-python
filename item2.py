@@ -11,7 +11,7 @@ def contarDigitos(numero):
 def main():
     numero = int(
         input("Informe um número para saber a quantidade de dígitos: \n"))
-    print(contarDigitos(numero), "dígitos")
+    print(contarDigitos(numero), " dígitos")
 
 
 main()
