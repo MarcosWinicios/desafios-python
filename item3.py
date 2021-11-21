@@ -25,18 +25,37 @@ def definirStatus(nota):
     return status
 
 
+def validarValor(entrada):
+    if entrada >= 0 or entrada <= 10:
+        return True
+    else:
+        return False
+
+
+def capturaValor():
+    nota = float(input("Informe uma nota: "))
+    condicao = validarValor(nota)
+
+    while True:
+        if not(condicao):
+            print("VALOR INVÁLIDO! A nota deve ser um valor entre 0 e 10\n")
+            nota = float(input("\nIforme uma nota válida: "))
+            condicao = validarValor(nota)
+        else:
+            break
+    return nota
+
+
 def main():
-    nota1 = float(input("Informe a nota 1: "))
-    nota2 = float(input("\nInforme a nota 2: "))
+
+    nota1 = capturaValor()
+    nota2 = capturaValor()
     print("\n")
 
     media = calcularMedia(nota1, nota2)
     status = definirStatus(media)
+    print("Média do aluno: ", media)
     print("Status do aluno: ", status)
 
 
 main()
-# total = calcularMedia(5, 0)
-# print("Média Final: ", total)
-
-# print("\nStatus: ", definirStatus(total))
