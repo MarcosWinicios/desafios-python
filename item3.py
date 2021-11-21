@@ -8,9 +8,24 @@
 # “Reprovado”
 
 def calcularMedia(nota1, nota2):
+    media = 0
     media = (nota1 + nota2)/2
     return media
 
 
-media = calcularMedia(6, 8)
-print(media)
+def definirStatus(nota):
+    status = ''
+    if nota > 6:
+        status = "Aprovado"
+    elif nota > 4:
+        status = "Verificação Suplementar"
+    else:
+        status = "Reprovado"
+
+    return status
+
+
+total = calcularMedia(5, 0)
+print("Média Final: ", total)
+
+print("\nStatus: ", definirStatus(total))
