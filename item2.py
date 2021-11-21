@@ -8,4 +8,10 @@ def contarDigitos(numero):
     return len(str(numero))
 
 
-print(contarDigitos(266))
+def main():
+    numero = int(
+        input("Informe um número para saber a quantidade de dígitos: \n"))
+    print(contarDigitos(numero), "dígitos")
+
+
+main()
