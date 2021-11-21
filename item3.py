@@ -25,7 +25,18 @@ def definirStatus(nota):
     return status
 
 
-total = calcularMedia(5, 0)
-print("Média Final: ", total)
+def main():
+    nota1 = float(input("Informe a nota 1: "))
+    nota2 = float(input("\nInforme a nota 2: "))
+    print("\n")
 
-print("\nStatus: ", definirStatus(total))
+    media = calcularMedia(nota1, nota2)
+    status = definirStatus(media)
+    print("Status do aluno: ", status)
+
+
+main()
+# total = calcularMedia(5, 0)
+# print("Média Final: ", total)
+
+# print("\nStatus: ", definirStatus(total))
