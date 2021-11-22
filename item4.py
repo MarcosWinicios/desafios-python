@@ -29,7 +29,7 @@ def capturarNotasDeTodosAlunos():
 
     for aluno in range(10):
         media = calcularMedia(capturaNotasIndividuais(aluno))
-        print("Média: ", media)
+        print("\nMédia: ", media)
         print("\n___________________________\n")
         listaDeMedias.append(media)
 
@@ -47,7 +47,8 @@ def contarAprovados(listaDeNotas):
 def main():
     listaDeMedias = capturarNotasDeTodosAlunos()
     quantidadeAprovados = contarAprovados(listaDeMedias)
-    print(quantidadeAprovados)
+    print("A quantidade de alunos APROVADOS foi de ",
+          quantidadeAprovados, ". Estes obtiveram média MAIOR OU IGUAL a 7")
 
 
 main()
