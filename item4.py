@@ -31,7 +31,7 @@ def capturarNotasDeTodosAlunos():
 
     for aluno in range(10):
         media = calcularMedia(capturaNotasIndividuais(aluno))
-        print("Média: ", media)
+        print("Média: %.1f" % media)
         print("\n_____________________________________________\n")
         listaDeMedias.append(media)
 
