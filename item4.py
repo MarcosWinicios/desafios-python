@@ -5,12 +5,31 @@
 # num vetor a média de cada aluno, imprima o número de alunos com média maior
 # ou igual a 7.0.
 
+def calcularMedia(listaDeNotas):
+    media = 0
+    soma = 0
+    for nota in listaDeNotas:
+        soma += nota
 
-def capturarNotas():
+    media = soma / len(listaDeNotas)
+
+    return media
+
+
+def capturaNotasIndividuais(aluno):
     listaDeNotas = []
+    for nota in range(4):
+        print("Informe a ", nota+1, "° nota do aluno ", aluno, " :")
+        valor = float(input())
+        listaDeNotas.append(valor)
+    return listaDeNotas
+
+
+def capturarNotasDetodosAlunos():
+    listaDeMedias = []
 
     for aluno in range(10):
-        print("Informe a nota do aluno ", aluno+1)
+        capturaNotasIndividuais(aluno)
         nota = float(input())
         listaDeNotas.append(nota)
 
