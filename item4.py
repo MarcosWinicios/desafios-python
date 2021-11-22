@@ -10,7 +10,6 @@ def calcularMedia(listaDeNotas):
     soma = 0
     for nota in listaDeNotas:
         soma += nota
-
     media = soma / len(listaDeNotas)
 
     return media
@@ -19,21 +18,22 @@ def calcularMedia(listaDeNotas):
 def capturaNotasIndividuais(aluno):
     listaDeNotas = []
     for nota in range(4):
-        print("Informe a ", nota+1, "° nota do aluno ", aluno, " :")
+        print("Informe a ", nota+1, "° nota do aluno ", aluno+1, " :")
         valor = float(input())
         listaDeNotas.append(valor)
     return listaDeNotas
 
 
-def capturarNotasDetodosAlunos():
+def capturarNotasDeTodosAlunos():
     listaDeMedias = []
 
     for aluno in range(10):
-        capturaNotasIndividuais(aluno)
-        nota = float(input())
-        listaDeNotas.append(nota)
+        media = calcularMedia(capturaNotasIndividuais(aluno))
+        print("Média: ", media)
+        print("\n___________________________\n")
+        listaDeMedias.append(media)
 
-    return listaDeNotas
+    return listaDeMedias
 
 
 def contarAprovados(listaDeNotas):
@@ -43,6 +43,14 @@ def contarAprovados(listaDeNotas):
             quantidadeAprovados += 1
     return quantidadeAprovados
 
+
+def main():
+    listaDeMedias = capturarNotasDeTodosAlunos()
+    quantidadeAprovados = contarAprovados(listaDeMedias)
+    print(quantidadeAprovados)
+
+
+main()
 
 vetor = [4.0, 5.9, 7.2, 6.0, 10.0, 8.0, 5.0, 6.0, 6.5, 9.0]
 
