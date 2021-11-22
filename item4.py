@@ -21,6 +21,8 @@ def capturaNotasIndividuais(aluno):
         print("Informe a ", nota+1, "° nota do aluno ", aluno+1, " :")
         valor = float(input())
         listaDeNotas.append(valor)
+
+    print("\nNotas: ", listaDeNotas, "\n")
     return listaDeNotas
 
 
@@ -29,8 +31,8 @@ def capturarNotasDeTodosAlunos():
 
     for aluno in range(10):
         media = calcularMedia(capturaNotasIndividuais(aluno))
-        print("\nMédia: ", media)
-        print("\n___________________________\n")
+        print("Média: ", media)
+        print("\n_____________________________________________\n")
         listaDeMedias.append(media)
 
     return listaDeMedias
@@ -47,12 +49,8 @@ def contarAprovados(listaDeNotas):
 def main():
     listaDeMedias = capturarNotasDeTodosAlunos()
     quantidadeAprovados = contarAprovados(listaDeMedias)
-    print("A quantidade de alunos APROVADOS foi de ",
-          quantidadeAprovados, ". Estes obtiveram média MAIOR OU IGUAL a 7")
+    print("Resultado final: ",
+          quantidadeAprovados, "Alunos aprovados.\nEstes obtiveram média MAIOR OU IGUAL a 7")
 
 
 main()
-
-vetor = [4.0, 5.9, 7.2, 6.0, 10.0, 8.0, 5.0, 6.0, 6.5, 9.0]
-
-print(contarAprovados())
