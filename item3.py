@@ -26,7 +26,7 @@ def definirStatus(nota):
 
 
 def validarValor(entrada):
-    if entrada >= 0 or entrada <= 10:
+    if entrada >= 0 and entrada <= 10:
         return True
     else:
         return False
