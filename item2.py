@@ -3,7 +3,6 @@
 
 # Faça uma função que informe a quantidade de dígitos de um determinado número inteiro informado.
 
-
 def contarDigitos(numero):
     return len(str(numero))
 

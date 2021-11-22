@@ -4,6 +4,15 @@
 # Faça um Programa que peça as quatro notas de 10 alunos, calcule e armazene
 # num vetor a média de cada aluno, imprima o número de alunos com média maior
 # ou igual a 7.0.
+
+def imprimirArray(lista):
+    contador = 1
+    for valor in lista:
+        print("Nota ", contador, ": %.1f" % valor, "\n")
+        contador += 1
+    print("\n")
+
+
 def validarIntervalo(entrada):
     if entrada >= 0 and entrada <= 10:
         return True
@@ -70,7 +79,9 @@ def contarAprovados(listaDeNotas):
 def main():
     listaDeMedias = capturarNotasDeTodosAlunos()
     quantidadeAprovados = contarAprovados(listaDeMedias)
-    print(">>>> RESULTADO FINAL <<<\n\nLista de médias:\n\n", listaDeMedias, "\n\nQuantidade de alunos aprovados: ",
+    print(">>>> RESULTADO FINAL <<<\n\nLista de médias:\n")
+    imprimirArray(listaDeMedias)
+    print("\nQuantidade de alunos aprovados: ",
           quantidadeAprovados, ".\nEstes obtiveram média MAIOR OU IGUAL a 7")
 
 

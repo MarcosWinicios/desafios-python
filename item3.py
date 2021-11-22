@@ -47,7 +47,6 @@ def capturaValor():
 
 
 def main():
-
     nota1 = capturaValor()
     nota2 = capturaValor()
     print("\n")
