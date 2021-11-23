@@ -9,7 +9,7 @@ def contarDigitos(numero):
 
 def main():
     numero = int(
-        input("Informe um número para saber a quantidade de dígitos: \n"))
+        input("Informe um número inteiro para saber a quantidade de dígitos: \n"))
     print(contarDigitos(numero), " dígitos")
 
 
