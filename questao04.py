@@ -5,12 +5,11 @@
 # num vetor a média de cada aluno, imprima o número de alunos com média maior
 # ou igual a 7.0.
 
-def imprimirArray(lista):
+def imprimirListaDeMedias(lista):
     contador = 1
     for valor in lista:
-        print("Média ", contador, ": %.1f" % valor, "\n")
+        print("Média do aluno ", contador, ": %.1f" % valor, "\n")
         contador += 1
-    print("\n")
 
 
 def validarIntervalo(entrada):
@@ -28,7 +27,7 @@ def validarValor(nota):
             nota = float(input("Iforme uma nota válida: "))
             condicao = validarIntervalo(nota)
         else:
-            print("\n")
+            print()
             break
 
     return nota
@@ -80,7 +79,7 @@ def main():
     listaDeMedias = capturarNotasDeTodosAlunos()
     quantidadeAprovados = contarAprovados(listaDeMedias)
     print(">>>> RESULTADO FINAL <<<\n\nLista de médias:\n")
-    imprimirArray(listaDeMedias)
+    imprimirListaDeMedias(listaDeMedias)
     print("\nQuantidade de alunos aprovados: ",
           quantidadeAprovados, ".\nEstes obtiveram média MAIOR OU IGUAL a 7")
 
