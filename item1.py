@@ -7,9 +7,7 @@
 # função “altera” o valor de custo para incluir o imposto sobre vendas.
 
 def somaImposto(taxaImposto, custo):
-    taxaImposto = taxaImposto/100
-    imposto = custo * taxaImposto
-    return imposto + custo
+    return custo + (custo * (taxaImposto/100))
 
 
 def capturarDados():
