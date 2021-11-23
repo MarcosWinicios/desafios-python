@@ -8,7 +8,7 @@
 def imprimirArray(lista):
     contador = 1
     for valor in lista:
-        print("Nota ", contador, ": %.1f" % valor, "\n")
+        print("Média ", contador, ": %.1f" % valor, "\n")
         contador += 1
     print("\n")
 
@@ -52,7 +52,7 @@ def capturaNotasIndividuais(aluno):
         valor = validarValor(valor)
         listaDeNotas.append(valor)
 
-    print("\nNotas: ", listaDeNotas, "\n")
+    print("Notas: ", listaDeNotas, "\n")
     return listaDeNotas
 
 

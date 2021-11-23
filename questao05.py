@@ -13,7 +13,7 @@ def validarIntervaloDoValor(valor):
 
 
 def capturaValor():
-    nota = float(input("Informe uma nota entre 0 e 10"))
+    nota = float(input("Informe uma nota entre 0 e 10: "))
     return nota
 
 
