@@ -7,4 +7,21 @@
 # função “altera” o valor de custo para incluir o imposto sobre vendas.
 
 def somaImposto(taxaImposto, custo):
-    taxaImposto = taxaImposto / 100
+    taxaImposto = taxaImposto/100
+    imposto = custo * taxaImposto
+    return imposto + custo
+
+
+def capturarDados():
+    custoItem = float(input("Iforme o custo do item: "))
+    taxaImposto = float(input("Iforme a taxa de imposto deste item: "))
+    return custoItem, taxaImposto
+
+
+def main():
+    custoItem, taxaImposto = capturarDados()
+    valorTotal = somaImposto(taxaImposto, custoItem)
+    print("\nValor total do produto para venda: R$ %.2f" % valorTotal)
+
+
+main()
